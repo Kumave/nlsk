@@ -1,0 +1,146 @@
+:root {
+  --rosa-fuerte: #e56fa6;
+  --rosa-medio: #f8a5c2;
+  --rosa-claro: #ffe4ec;
+  --blanco: #fff;
+  --gris: #555;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--rosa-claro);
+  color: var(--gris);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--rosa-fuerte);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--rosa-claro);
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  background: var(--blanco);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--rosa-fuerte);
+  text-align: center;
+}
+
+.grid-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.reloj {
+  text-align: center;
+  background-color: var(--rosa-claro);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.reloj:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: var(--rosa-fuerte);
+  border: none;
+  color: var(--blanco);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--rosa-medio);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid var(--rosa-medio);
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--rosa-fuerte);
+  color: var(--blanco);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+
+---
+
+💫 script.js
+
+// Autenticación simple con localStorage
+const formLogin = document.getElementById('form-login');
+formLogin.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const user = document.getElementById('usuario').value;
+  const pass = document.getElementById('password').value;
+
+  if (user === "admin" && pass === "1234") {
+    alert("Inicio de sesión exitoso 💕 Bienvenida, " + user);
+    localStorage.setItem("usuario", user);
+  } else {
+    alert("Usuario o contraseña incorrectos 😢");
+  }
+});
+
+// Comparador simple
+const compararBtn = document.getElementById('comparar');
+compararBtn.addEventListener('click', () => {
+  const relojA = document.getElementById('relojA').value;
+  const relojB = document.getElementById('relojB').value;
+  const resultado = document.getElementById('resultadoComparacion');
+
+  if (!relojA || !relojB) {
+    resultado.innerHTML = "<p>Selecciona dos relojes para comparar 💡</p>";
+    return;
+  }
+
+  if (relojA === relojB) {
+    resultado.innerHTML = "<p>Ambos relojes son iguales 💖</p>";
+  } else {
+    resultado.innerHTML = `<p>El ${relojA} tiene un estilo diferente al ${relojB} ✨</p>`;
+  }
+});
