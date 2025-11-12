@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Relojes de Lujo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>⟡ Tienda de Relojes de Lujo ⟡</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#comparador">Comparador</a></li>
+        <li><a href="#autenticacion">Autenticación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+      <p>Explora nuestra colección de relojes de lujo con estilo y elegancia.</p>
+      <canvas id="visor3D"></canvas>
+    </section>
+
+    <section id="catalogo">
+      <h2>Catálogo de Relojes</h2>
+      <div class="grid-catalogo">
+        <article class="reloj">
+          <img src="img/reloj1.jpg" alt="Reloj Clásico">
+          <h3>Reloj Clásico Rosa</h3>
+          <p>Precio: $15,000 MXN</p>
+          <button>Ver Detalles</button>
+        </article>
+
+        <article class="reloj">
+          <img src="img/reloj2.jpg" alt="Reloj Moderno">
+          <h3>Reloj Moderno Dorado</h3>
+          <p>Precio: $22,000 MXN</p>
+          <button>Ver Detalles</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="comparador">
+      <h2>Comparador de Relojes</h2>
+      <div id="comparador-container">
+        <select id="relojA">
+          <option value="">Selecciona reloj A</option>
+          <option value="clásico">Reloj Clásico Rosa</option>
+          <option value="moderno">Reloj Moderno Dorado</option>
+        </select>
+
+        <select id="relojB">
+          <option value="">Selecciona reloj B</option>
+          <option value="clásico">Reloj Clásico Rosa</option>
+          <option value="moderno">Reloj Moderno Dorado</option>
+        </select>
+
+        <button id="comparar">Comparar</button>
+      </div>
+      <div id="resultadoComparacion"></div>
+    </section>
+
+    <section id="autenticacion">
+      <h2>Iniciar Sesión</h2>
+      <form id="form-login">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="form-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tienda de Relojes de Lujo | Diseñado con 💕 por Ana</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
